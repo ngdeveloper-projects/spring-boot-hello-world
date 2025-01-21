@@ -1,5 +1,5 @@
-# Use a base image with Java
-FROM openjdk:11-jre-slim
+# Use a base image with Java 8
+FROM openjdk:8-jre-slim
 
 # Copy the application JAR to the container
 COPY target/myapp.jar app.jar
