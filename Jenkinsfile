@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'maven:3.8.6-openjdk-11' // Use Maven image for the build
+            image 'maven:3.6.3-openjdk-8' // Use Maven image compatible with Java 8
         }
     }
 
