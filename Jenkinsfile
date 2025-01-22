@@ -6,11 +6,13 @@ pipeline {
     }
 
     stages {
+       
         stage('Checkout') {
             steps {
-                git 'https://github.com/ngdeveloper-projects/spring-boot-hello-world.git'
+                git branch: 'main', url: 'https://github.com/ngdeveloper-projects/spring-boot-hello-world.git'
             }
         }
+    
         stage('Build') {
             steps {
                
