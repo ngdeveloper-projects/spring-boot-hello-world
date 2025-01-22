@@ -33,7 +33,7 @@ pipeline {
                     '''
 
                     // Run the new container
-                    sh 'docker run -d --name myapp --network jenkins-network -p 8090:8080 myapp:latest'
+                    sh 'docker run -d --name myapp --network jenkins-network -p 8081:8080 myapp:latest'
                 }
             }
         }
