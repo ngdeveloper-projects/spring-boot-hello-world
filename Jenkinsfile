@@ -13,6 +13,7 @@ pipeline {
         }
         stage('Build') {
             steps {
+               
                 sh 'mvn clean package'
             }
         }
@@ -24,6 +25,7 @@ pipeline {
 
                     // Stop and remove the existing container
                     sh '''
+                    docker exec -u 0 -ti myapp sh
                     docker stop myapp || true
                     docker rm myapp || true
                     '''
