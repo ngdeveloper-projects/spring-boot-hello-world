@@ -25,13 +25,13 @@ pipeline {
 
                     // Stop and remove the existing container
                     sh '''
-                    docker exec -u 0 -ti myapp sh
+                    
                     docker stop myapp || true
                     docker rm myapp || true
                     '''
 
                     // Run the new container
-                    sh 'docker run -d --name myapp --network jenkins-network -p 8080:8080 myapp:latest'
+                    sh 'docker run -d --name myapp --network jenkins-network -p 8090:8080 myapp:latest'
                 }
             }
         }
